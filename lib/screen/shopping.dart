@@ -177,7 +177,7 @@ class ShopScreen extends StatelessWidget {
                   SizedBox(
                     height: 40,
                     child: FloatingActionButton(
-                      heroTag: "button_to_anime_screen",
+                      heroTag: "button_to_anime_screen_1",
                       onPressed: () {
                         Navigator.pushReplacement(
                           context,
@@ -198,7 +198,7 @@ class ShopScreen extends StatelessWidget {
                   SizedBox(
                     height: 40,
                     child: FloatingActionButton(
-                      heroTag: "button_to_anime_screen",
+                      heroTag: "button_to_anime_screen_2",
                       onPressed: () {
                         Navigator.pushReplacement(
                           context,
@@ -219,7 +219,7 @@ class ShopScreen extends StatelessWidget {
                   SizedBox(
                     height: 40,
                     child: FloatingActionButton(
-                      heroTag: "button_to_anime_screen",
+                      heroTag: "button_to_anime_screen_3",
                       onPressed: () {
                         Navigator.pushReplacement(
                           context,
@@ -240,7 +240,7 @@ class ShopScreen extends StatelessWidget {
                   SizedBox(
                     height: 40,
                     child: FloatingActionButton(
-                      heroTag: "button_to_anime_screen",
+                      heroTag: "button_to_anime_screen_4",
                       onPressed: () {
                         Navigator.pushReplacement(
                           context,
@@ -261,7 +261,7 @@ class ShopScreen extends StatelessWidget {
                   SizedBox(
                     height: 40,
                     child: FloatingActionButton(
-                      heroTag: "button_to_anime_screen",
+                      heroTag: "button_to_anime_screen_5",
                       onPressed: () {
                         Navigator.pushReplacement(
                           context,
@@ -286,438 +286,8 @@ class ShopScreen extends StatelessWidget {
               height: 5,
               color: Colors.white,
             ),
-            SafeArea(
-        child: Container(
-          height: double.infinity,
-          color: Colors.amber[100],
-          child: GetX<AnimeController>(
-            builder: (controller) {
-              return ListView.builder(
-                itemCount: controller.products_1.length,
-                itemBuilder: (context, index) {
-                  return Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Container(
-                              width: 176.35,
-                              //360 - 7.3
-                              height: 220,
-                              decoration: BoxDecoration(
-                                color: Colors.indigo[700],
-                                image: DecorationImage(
-                                  image: AssetImage(controller
-                                      .products_1[index].productImages),
-                                  fit: BoxFit.cover,
-                                ),
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsets.all(16.0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            SizedBox(
-                                              height: 25,
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(
-                                      height: 128,
-                                    ),
-                                    Row(
-                                      children: [
-                                        SizedBox(
-                                          height: 35,
-                                          child: FloatingActionButton(
-                                            child:
-                                                Icon(Icons.keyboard_arrow_up),
-                                            backgroundColor:
-                                                Colors.indigoAccent,
-                                            foregroundColor: Colors.white,
-                                            heroTag: "btn_1_1_${index}",
-                                            onPressed: () {
-                                              showDialog(
-                                                barrierColor:
-                                                    Colors.indigo[700],
-                                                context: context,
-                                                builder:
-                                                    (BuildContext context) {
-                                                  return AlertDialog(
-                                                    content: Container(
-                                                      width: 500,
-                                                      height: 350,
-                                                      child: Column(
-                                                        children: [
-                                                          Row(
-                                                            children: [
-                                                              Text(
-                                                                '${controller.products_1[index].productName}',
-                                                                style:
-                                                                    TextStyle(
-                                                                  fontSize: 15,
-                                                                  color: Colors
-                                                                      .black,
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          Row(
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .center,
-                                                            children: [
-                                                              SizedBox(
-                                                                width: 250,
-                                                                height: 150,
-                                                                child:
-                                                                    Image.asset(
-                                                                  "${controller.products_1[index].productImages}",
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          SizedBox(
-                                                            height: 10,
-                                                          ),
-                                                          Row(
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .start,
-                                                            children: [
-                                                              SizedBox(
-                                                                width: 260,
-                                                                height: 70,
-                                                                child: Text(
-                                                                  '${controller.products_1[index].productDescription}',
-                                                                  style:
-                                                                      TextStyle(
-                                                                    color: Colors
-                                                                        .black,
-                                                                    fontSize:
-                                                                        12,
-                                                                  ),
-                                                                ),
-                                                              )
-                                                            ],
-                                                          ),
-                                                          SizedBox(
-                                                            height: 20,
-                                                          ),
-                                                          Row(
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .center,
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            children: [
-                                                              Text(
-                                                                ' Price : ${controller.products_1[index].price} Baht',
-                                                                style: TextStyle(
-                                                                    color: Colors
-                                                                        .black),
-                                                              ),
-                                                              SizedBox(
-                                                                width: 85,
-                                                              ),
-                                                              SizedBox(
-                                                                height: 35,
-                                                                child:
-                                                                    FloatingActionButton(
-                                                                  child: Icon(
-                                                                      Icons
-                                                                          .add),
-                                                                  backgroundColor:
-                                                                      Colors.indigo[
-                                                                          700],
-                                                                  foregroundColor:
-                                                                      Colors
-                                                                          .white,
-                                                                  heroTag:
-                                                                      "btn_2_2_${index}",
-                                                                  onPressed:
-                                                                      () => [
-                                                                    cartController
-                                                                        .addToCart(
-                                                                            controller.products_1[index]),
-                                                                    Fluttertoast
-                                                                        .showToast(
-                                                                      msg:
-                                                                          "Add ${controller.products_1[index].productName} Is Complete",
-                                                                      gravity:
-                                                                          ToastGravity
-                                                                              .SNACKBAR,
-                                                                      timeInSecForIosWeb:
-                                                                          3,
-                                                                      backgroundColor:
-                                                                          Colors
-                                                                              .green,
-                                                                      textColor:
-                                                                          Colors
-                                                                              .white,
-                                                                    ),
-                                                                  ],
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          SizedBox(
-                                                            height: 30,
-                                                          ),
-                                                          SizedBox(
-                                                            child: Text(
-                                                              "Press Around To Exit",
-                                                              style: TextStyle(
-                                                                  fontSize: 10),
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  );
-                                                },
-                                              );
-                                            },
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Container(
-                              width: 176.35,
-                              //360 - 7.3
-                              height: 220,
-                              decoration: BoxDecoration(
-                                color: Colors.indigo[700],
-                                image: DecorationImage(
-                                  image: AssetImage(controller
-                                      .products_2[index].productImages),
-                                  fit: BoxFit.cover,
-                                ),
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsets.all(16.0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            SizedBox(
-                                              height: 25,
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(
-                                      height: 128,
-                                    ),
-                                    Row(
-                                      children: [
-                                        SizedBox(
-                                          height: 35,
-                                          child: FloatingActionButton(
-                                            child:
-                                                Icon(Icons.keyboard_arrow_up),
-                                            backgroundColor:
-                                                Colors.indigoAccent,
-                                            foregroundColor: Colors.white,
-                                            heroTag: "btn_3_1_${index}",
-                                            onPressed: () {
-                                              showDialog(
-                                                barrierColor:
-                                                    Colors.indigo[700],
-                                                context: context,
-                                                builder:
-                                                    (BuildContext context) {
-                                                  return AlertDialog(
-                                                    content: Container(
-                                                      width: 500,
-                                                      height: 350,
-                                                      child: Column(
-                                                        children: [
-                                                          Row(
-                                                            children: [
-                                                              Text(
-                                                                '${controller.products_2[index].productName}',
-                                                                style:
-                                                                    TextStyle(
-                                                                  fontSize: 15,
-                                                                  color: Colors
-                                                                      .black,
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          Row(
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .center,
-                                                            children: [
-                                                              SizedBox(
-                                                                width: 250,
-                                                                height: 150,
-                                                                child:
-                                                                    Image.asset(
-                                                                  "${controller.products_2[index].productImages}",
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          SizedBox(
-                                                            height: 10,
-                                                          ),
-                                                          Row(
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .start,
-                                                            children: [
-                                                              SizedBox(
-                                                                width: 260,
-                                                                height: 70,
-                                                                child: Text(
-                                                                  '${controller.products_2[index].productDescription}',
-                                                                  style:
-                                                                      TextStyle(
-                                                                    color: Colors
-                                                                        .black,
-                                                                    fontSize:
-                                                                        12,
-                                                                  ),
-                                                                ),
-                                                              )
-                                                            ],
-                                                          ),
-                                                          SizedBox(
-                                                            height: 20,
-                                                          ),
-                                                          Row(
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .center,
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            children: [
-                                                              Text(
-                                                                ' Price : ${controller.products_2[index].price} Baht',
-                                                                style: TextStyle(
-                                                                    color: Colors
-                                                                        .black),
-                                                              ),
-                                                              SizedBox(
-                                                                width: 85,
-                                                              ),
-                                                              SizedBox(
-                                                                height: 35,
-                                                                child:
-                                                                    FloatingActionButton(
-                                                                  child: Icon(
-                                                                      Icons
-                                                                          .add),
-                                                                  backgroundColor:
-                                                                      Colors
-                                                                          .indigoAccent,
-                                                                  foregroundColor:
-                                                                      Colors
-                                                                          .white,
-                                                                  heroTag:
-                                                                      "btn_4_2_${index}",
-                                                                  onPressed:
-                                                                      () => [
-                                                                    cartController
-                                                                        .addToCart(
-                                                                            controller.products_2[index]),
-                                                                    Fluttertoast
-                                                                        .showToast(
-                                                                      msg:
-                                                                          "Add ${controller.products_2[index].productName} Is Complete",
-                                                                      gravity:
-                                                                          ToastGravity
-                                                                              .SNACKBAR,
-                                                                      timeInSecForIosWeb:
-                                                                          3,
-                                                                      backgroundColor:
-                                                                          Colors
-                                                                              .green,
-                                                                      textColor:
-                                                                          Colors
-                                                                              .white,
-                                                                    ),
-                                                                  ],
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          SizedBox(
-                                                            height: 30,
-                                                          ),
-                                                          SizedBox(
-                                                            child: Text(
-                                                              "Press Around To Exit",
-                                                              style: TextStyle(
-                                                                  fontSize: 10),
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  );
-                                                },
-                                              );
-                                            },
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  );
-                },
-              );
-            },
-          ),
-        ),
-      ),],
+            Text("Press On 1 Of 5 Icon Movie")
+          ],
         ),
       ),
       bottomNavigationBar: Container(
